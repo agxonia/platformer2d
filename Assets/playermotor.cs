@@ -22,16 +22,23 @@ public class playermotor : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        HandlePlayerMovement();
+        MaxSpeedLimiting();
+    }
+    private void HandlePlayerMovement()
+    {
         if (direction.x != 0)
         {
             rigidbody2d.AddForce(new Vector2(direction.x * speed, 0));
         }
-        else if(rigidbody2d.linearVelocityX !=0)
+        else if (rigidbody2d.linearVelocityX != 0)
         {
             //zatrzymywanie
             rigidbody2d.AddForce(new Vector2(-rigidbody2d.linearVelocityX * stoppingforce, 0));
         }
-
+    }
+    private void MaxSpeedLimiting()
+    { 
         if (rigidbody2d.linearVelocityX >= maxspeed)
         {
             rigidbody2d.linearVelocityX = maxspeed;
