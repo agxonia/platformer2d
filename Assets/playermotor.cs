@@ -52,7 +52,7 @@ public class playermotor : MonoBehaviour
     }
     void OnMove(InputValue value)
     {
-        Debug.Log("Move");
+       // Debug.Log("Move");
         //Debug.Log(value.Get<Vector2>());
         direction = value.Get<Vector2>();
     }
