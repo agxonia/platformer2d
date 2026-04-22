@@ -9,7 +9,7 @@ public class healthcomponent : MonoBehaviour
     private float MaxHealth = 15;
     private bool invicibility;
 
-    public delegate void OnHealthInitializedHandler(float newHealth);
+    public delegate void OnHealthInitializedHandler(float Health);
     public delegate void OnHealthChangedHandler(float newHealth, float amountChanged);
     public event OnHealthChangedHandler OnHealthChanged;
     public event OnHealthInitializedHandler OnHealthInitialized;
