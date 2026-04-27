@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class healthcomponent : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class healthcomponent : MonoBehaviour
         if (Health <= 0)
         {
             Health = 0;
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("endgame");
         }
         OnHealthChanged?.Invoke(Health, -damage);
     }
