@@ -66,7 +66,7 @@ public class playermotor : MonoBehaviour
         }
         else if (canDoubleJump)
         {
-            rigidbody2d.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+            rigidbody2d.AddForce(Vector2.up * jumpforce * 0.5f , ForceMode2D.Impulse);
             canDoubleJump = false;
         }
     }
