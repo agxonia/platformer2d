@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 25513911}
   - component: {fileID: 25513912}
   - component: {fileID: 25513913}
+  - component: {fileID: 25513914}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpforce: 5
+  dashforce: 15
   maxspeed: 5
   stoppingforce: 5
 --- !u!50 &25513910
@@ -358,6 +360,28 @@ MonoBehaviour:
   money: 0
   maxMoney: 10
   moneyhealth: 10
+--- !u!95 &25513914
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25513905}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b6b783195c5e194bb40ba9b7a016127, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &161399486
 GameObject:
   m_ObjectHideFlags: 0
