@@ -32,6 +32,7 @@ public class playermotor : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        animator.SetFloat("SpeedY", rigidbody2d.linearVelocityY);
         //(check if moving right)
        if(direction.x > 0)
         {
