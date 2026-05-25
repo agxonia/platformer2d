@@ -95,6 +95,7 @@ public class playermotor : MonoBehaviour
         else if (canDoubleJump)
         {
             rigidbody2d.AddForce(Vector2.up * jumpforce * 0.5f, ForceMode2D.Impulse);
+            animator.SetBool("IsDoubleJumping", true);
             canDoubleJump = false;
         }
     }
@@ -133,6 +134,7 @@ public class playermotor : MonoBehaviour
         canJump = true;
         canDoubleJump = true;
         animator.SetBool("IsJumping", false);
+        animator.SetBool("IsDoubleJumping", false);
     }
    
 }
